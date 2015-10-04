@@ -53,9 +53,10 @@ fun arabicToRoman(arabic: Int): String {
         var div = temp / arabicValue
         while (div > 0) {
             roman += arabicMapping.second
+            roman = normalize(roman)
+
             temp -= arabicValue
             div = temp / arabicValue
-            roman = normalize(roman)
         }
     }
 
