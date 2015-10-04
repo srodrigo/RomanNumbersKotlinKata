@@ -3,7 +3,7 @@ package me.srodrigo.roman_kata
 import org.junit.Assert
 import org.junit.Test
 
-class RomanNumbersTest {
+class RomanToArabicTest {
 
     @Test fun one() {
         Assert.assertEquals(1, romanToArabic("I"))
