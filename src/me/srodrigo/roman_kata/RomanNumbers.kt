@@ -19,5 +19,14 @@ private val conversion = mapOf(
 )
 
 fun romanToArabic(roman: String): Int {
-    return conversion[roman.first()]!!
+    var arabic = 0
+
+    var lastValue = 0
+    for (c in roman.reversed()) {
+        val value = conversion[c]!!
+        arabic += if (value >= lastValue) value else -value
+        lastValue = value
+    }
+
+    return arabic
 }
