@@ -8,7 +8,7 @@ const val HUNDRED = 'C'
 const val FIVE_HUNDRED = 'D'
 const val THOUSAND = 'M'
 
-private val conversion = mapOf(
+private val romanToArabicTable = mapOf(
         ONE to 1,
         FIVE to 5,
         TEN to 10,
@@ -18,15 +18,29 @@ private val conversion = mapOf(
         THOUSAND to 1000
 )
 
+private val arabicToRomanTable = mapOf(
+        1 to ONE,
+        5 to FIVE,
+        10 to TEN,
+        50 to FIFTY,
+        100 to HUNDRED,
+        500 to FIVE_HUNDRED,
+        1000 to THOUSAND
+)
+
 fun romanToArabic(roman: String): Int {
     var arabic = 0
 
     var lastValue = 0
     for (c in roman.reversed()) {
-        val value = conversion[c]!!
+        val value = romanToArabicTable[c]!!
         arabic += if (value >= lastValue) value else -value
         lastValue = value
     }
 
     return arabic
+}
+
+fun arabicToRoman(arabic: Int): String {
+    return arabicToRomanTable[arabic]!!.toString()
 }

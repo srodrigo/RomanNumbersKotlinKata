@@ -5,31 +5,13 @@ import org.junit.Test
 
 class RomanToArabicTest {
 
-    @Test fun one() {
+    @Test fun basicNumbers() {
         Assert.assertEquals(1, romanToArabic("I"))
-    }
-
-    @Test fun five() {
         Assert.assertEquals(5, romanToArabic("V"))
-    }
-
-    @Test fun ten() {
         Assert.assertEquals(10, romanToArabic("X"))
-    }
-
-    @Test fun fifty() {
         Assert.assertEquals(50, romanToArabic("L"))
-    }
-
-    @Test fun hundred() {
         Assert.assertEquals(100, romanToArabic("C"))
-    }
-
-    @Test fun fiveHundred() {
         Assert.assertEquals(500, romanToArabic("D"))
-    }
-
-    @Test fun thousand() {
         Assert.assertEquals(1000, romanToArabic("M"))
     }
 
