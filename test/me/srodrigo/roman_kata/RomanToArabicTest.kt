@@ -39,11 +39,11 @@ class RomanToArabicTest {
         Assert.assertEquals(25, romanToArabic("XXV"))
     }
 
-    @Test fun twentyForty() {
+    @Test fun forty() {
         Assert.assertEquals(40, romanToArabic("XL"))
     }
 
-    @Test fun ninetyOne() {
+    @Test fun ninetyNine() {
         Assert.assertEquals(99, romanToArabic("XCIX"))
     }
 
